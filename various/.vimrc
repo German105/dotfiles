@@ -18,7 +18,12 @@ set smartindent
 set autoindent 
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
+"---------------------------"
+"No annoying swp files
+"---------------------------"
+set noswapfile
 "---------------------------"
 "Parethesis auto completion
 "---------------------------"
@@ -31,4 +36,12 @@ execute pathogen#infect()
 "---------------------------"
 "NERDTree
 "---------------------------"
-map <C-n> :NERDTreeToggle<CR>
+map <C-x> :NERDTreeToggle<CR>
+
+"---------------------------"
+"Explore
+"---------------------------"
+"let g:netrw_liststyle=3
+"let g:netrw_browse_split=4
+"let g:netrw_altv=1
+"map <C-x> :Lexplore <CR>
