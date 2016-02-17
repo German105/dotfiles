@@ -4,13 +4,23 @@ syntax enable
 set number
 set hidden
 set history=100
-set hlsearch
 set clipboard=unnamed
 set clipboard=unnamedplus
 set number
 set relativenumber
 set mouse=a
 set backspace=eol,start,indent
+"---------------------------"
+"Search
+"---------------------------"
+set hlsearch
+set incsearch
+nnoremap <leader><space> :nohlsearch<CR>
+"---------------------------"
+"UI config
+"---------------------------"
+set showcmd
+set cursorline
 "---------------------------"
 "Indentation
 "---------------------------"
