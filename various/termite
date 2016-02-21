@@ -1,5 +1,6 @@
 [options]
 allow_bold = true
+font = Hack 10
 
 #[colors]
 #background = rgba(0, 0, 0, 0.8)
