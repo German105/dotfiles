@@ -41,12 +41,12 @@ inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
 inoremap [ []<Esc>i
 
-execute pathogen#infect()
+"execute pathogen#infect()
 
 "---------------------------"
 "NERDTree
 "---------------------------"
-map <C-x> :NERDTreeToggle<CR>
+"map <C-x> :NERDTreeToggle<CR>
 
 "---------------------------"
 "Explore

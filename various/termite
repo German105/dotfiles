@@ -12,7 +12,7 @@ foreground      = #a39a90
 foreground_bold = #a39a90
 cursor          = #a39a90
 #background = rgba(22, 19, 15, 0.8) original bg
-background = rgba(2, 2, 2, 0.8)
+background = rgba(2, 2, 2, 0.75)
 
 # black
 color0  = #16130f
