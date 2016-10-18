@@ -8,3 +8,6 @@
     ttf-hack
     bdf-tewi-git
     ttf-droid
+
+[Packages]
+    perl-file-mimeinfo

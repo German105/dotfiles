@@ -41,12 +41,18 @@ inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
 inoremap [ []<Esc>i
 
-"execute pathogen#infect()
+"---------------------------"
+"Pathongen install
+"mkdir -p ~/.vim/autoload ~/.vim/bundle && \  
+"curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+"---------------------------"
+
+execute pathogen#infect()
 
 "---------------------------"
 "NERDTree
 "---------------------------"
-"map <C-x> :NERDTreeToggle<CR>
+map <C-x> :NERDTreeToggle<CR>
 
 "---------------------------"
 "Explore

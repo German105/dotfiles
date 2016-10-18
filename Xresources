@@ -1,0 +1,62 @@
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: argb:c6000000, #ffffff, #ed4b19
+rofi.color-normal: argb:0000000, #d8dee9, argb:0000000, #ed4b19, #1b2b34
+rofi.color-active: argb:0000000, #6699cc, argb:0000000, #6699cc, #1b2b34
+rofi.color-urgent: argb:0000000, #f99157, argb:0000000, #f99157, #1b2b34
+rofi -color-window "argb:c6000000, #ffffff, #ed4b19" -color-normal "argb:0000000, #d8dee9, argb:0000000, #ed4b19, #1b2b34" -color-active "argb:0000000, #6699cc, argb:0000000, #6699cc, #1b2b34" -color-urgent "argb:0000000, #f99157, argb:0000000, #f99157, #1b2b34"
+
+
+! ------------------------------------------------------------------------------
+! urxvt
+! ------------------------------------------------------------------------------
+!link matching
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.scrollBar: false
+
+!font
+URxvt.font: xft:hack:size=10
+URxvt.letterSpace: -1
+
+! special
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #ffffff
+
+urxvt*transparent: true
+urxvt*shading: 30
+
+! black
+*.color0:       #131313
+*.color8:       #d1d1d1
+
+! red
+*.color1:       #2d2d2d
+*.color9:       #d2c3ad
+
+! green
+*.color2:       #4c3a3d
+*.color10:      #df9767
+
+! yellow
+*.color3:       #4e4e4e
+*.color11:      #e1e1e1
+
+! blue
+*.color4:       #6f6f6f
+*.color12:      #ededed
+
+! magenta
+*.color5:       #909090
+*.color13:      #ed4b19
+
+! cyan
+*.color6:       #aaa998
+*.color14:      #f2361e
+
+! white
+*.color7:       #b1b1b1
