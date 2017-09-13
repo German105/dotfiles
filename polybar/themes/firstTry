@@ -9,20 +9,24 @@
 
 [colors]
 blackalpha= #cc000000
-background = #3a1e08
-background-clear = #9e5737
+;background = #29293d
+;background-clear = #47476b 
+
+background = #696969
+background-clear = #708090
 
 [bar/bartop]
 ;monitor = ${env:MONITOR:HDMI-1}
-font-0 = hack:pixelsize=10
-font-1 = fontawesome:pixelsize=10
+font-0 = hack:pixelsize=10;3
+font-1 = fontawesome:pixelsize=10;2
 width = 100%
-height = 18
+height = 15
 background = ${colors.background}
 border-top-color = ${colors.background}
 border-top-size = 4
 border-bottom-size = 0
-modules-right = leftClear temperature leftDark date leftClear
+modules-right = leftClear volume leftDark cpu leftClear filesystem leftDark battery leftClear temperature leftDark date
+modules-center = rightDark quote leftDark
 modules-left = i3
 
 [section/clear]
@@ -32,11 +36,39 @@ content-foreground = ${colors.background-clear}
 content-foreground = ${colors.background}
 content-background= ${colors.background-clear}
 
+[module/quote]
+type = custom/text
+content = " Remember the face of your father "
+content-background= ${colors.background-clear}
+
 [module/date]
 type = internal/date
 time = "%H:%M:%S"
 interval=1
-label = "  %date% %time%"
+label = "  %date% %time% "
+
+[module/cpu]
+type = internal/cpu
+label = "  %percentage%% "
+
+[module/volume]
+type = internal/volume
+; mapping = true
+format-volume =<label-volume>
+label-volume = "  %percentage%% "
+label-muted = " MUTED "
+label-background = ${colors.background-clear}
+label-muted-background = ${colors.background-clear}
+label-volume-background = ${colors.background-clear}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /
+label = "  %free% "
+label-mounted = "   %free% "
+label-background = ${colors.background-clear}
+label-mounted-background = ${colors.background-clear}
 
 [module/battery]
 inherit =section/dark
@@ -52,17 +84,14 @@ label-full = "   %percentage%% "
 
 [module/i3]
 type = internal/i3
+label-focused-background = ${colors.background-clear}
+;strip-wsnumbers = true
 
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-label = " %temperature% " 
+label = "  %temperature% " 
 label-background = ${colors.background-clear}
-
-[module/left]
-type = custom/text
-content = 
-content-font = 2
 
 [module/leftDark]
 inherit = section/dark
@@ -75,15 +104,14 @@ inherit = section/clear
 type = custom/text
 content = 
 
-[module/left2]
+[module/rightDark]
+inherit = section/dark
 type = custom/text
-content = " "
+content = 
+content-font = 2
 
-[module/left3]
+[module/rightClear]
+inherit = section/clear
 type = custom/text
-content = 
-
-[module/left4]
-type = custom/text
-content = 
-
+content = 
+content-font = 2
