@@ -6,7 +6,6 @@ set hidden
 set history=100
 set clipboard=unnamed
 set clipboard=unnamedplus
-set number
 set relativenumber
 set mouse=a
 set backspace=eol,start,indent
